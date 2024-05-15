@@ -8,9 +8,19 @@
     }
 }
 
-.section-cadastro{
+.inform{
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cadastro{
     max-width: 800px;
     border: 2px solid #ebc896;
+
+    & b{
+        animation: bloco 1s;
+    }
 
     & .ficha{
         padding: 5px;
@@ -20,163 +30,108 @@
         
     }
 
-    & .form-area {
-        width: 25em;
-        height: auto;
-        background-color: rgba(220, 251, 252, 0.349);
-        border-radius: 5px;
-        box-shadow: 0 0 10px rgba(14, 131, 131, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.5);
-
-    
-        & .input-container {
-            position: relative;
+    & form{
+        max-width: 800px;
+        & .input-form {
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 400px;
     
             & input {
-                width: 70%;
-                padding: 5px;
+                width: auto;
+                background: none;
                 border: none;
-                background: transparent;
                 border-bottom: 2px solid #ebc896;
-                font-size: 16px;
             }
     
-            &  label {
-                color: #665b4a;
-                position: absolute;
-                left: 10px;
-                top: 50%;
+            & input::-webkit-outer-spin-button,
+            input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+            }
+    
+            /* Firefox */
+            & input[type=number] {
+            -moz-appearance: textfield;
+            }
+    
+            & input[type="number"]{
                 
-                transform: translateY(-50%);
-                transition: top 0.3s, font-size 0.3s;
-                pointer-events: none;
-                font-size: 16px;
+                width: auto;
+                background: none;
+                border: none;
+                border-bottom: 2px solid #ebc896;
             }
-    
-            & input:focus + label, input:valid + label {
-                top: 0;
-                font-size: 13px;
-                color: #5e3803;
-            }
-    
             & input:focus {
                 outline: none;
                 border-bottom-color: #5e3803;
             }
-            & .btn-icon {
-                background: transparent;
+            & #idade{
+                width: 30px;
+            }
+    
+            & textarea{
+                height: 30px;
+                background: none;
                 border: none;
-                border-bottom: 2px solid #000000;
+                border-bottom: 2px solid #ebc896;
+            }
+    
+            & textarea:focus {
+                outline: none;
+                border-bottom-color: #5e3803;
+            }            
+        }
+        & .avaliacao{
+            border: 2px solid #ebc896;
+            
+            & .block{
+                background-color: #ebc896;
+                width: 200px;
+                margin-top: -12px;
+                }
+        }
+    }
+    & .recomendacoes{
+        max-width: 700px;
+        border: 2px solid #ebc896;
+        gap: 20px;
+
+        & .block{
+        height: auto;
+        width: 300px;
+        margin-top: -30px;
+        }
+
+        & .enfase{
+            & li {
+                list-style: "-> "
             }
         }
-    
-        & a {
-            text-decoration: none;
-            color: #000000;
-            border-radius: 5px;
-            padding: 5px 10px;
+
+        & li {
+            list-style: "- ";     
         }
-    
-        & a:hover {
-            text-decoration: underline;
+    }
+    & .questionario{
+        max-width: 700px;
+        border: 2px solid #ebc896;
+
+        & .block{
+            background-color: #ebc896;
+            width: 200px;
+            margin-top: -12px;
         }
-    
-        & .btn-login {
-            border: none;
-            color: white;
-            border-radius: 5px;
-            box-shadow: 0 0 5px rgba(63, 59, 2, 0.562);
-            background: linear-gradient(to right, rgb(0, 0, 0) 50%, rgb(36, 33, 71) 50%);
-            background-size: 200% 100%;
-            background-position: right bottom;
-            transition: background-position 0.5s;
-            padding: 5px 20px;
-        }
-        
-        & .btn-login:hover {
-            color: rgb(255, 255, 255);
-            background-position: left bottom;
-        }
-        
-        & .btn-login:active {
-            transform: scale(0.95);
-        }
-    
     }
 }
 
-form{
-
-    max-width: 600px;
-    & .input-form {
-        background: none;
-        border: none;
-
-        & input {
-            width: auto;
-            background: none;
-            border: none;
-            border-bottom: 2px solid #ebc896;
-        }
-
-        & input::-webkit-outer-spin-button,
-        input::-webkit-inner-spin-button {
-        -webkit-appearance: none;
-        margin: 0;
-        }
-
-        /* Firefox */
-        & input[type=number] {
-        -moz-appearance: textfield;
-        }
-
-        & input[type="number"]{
-            
-            width: auto;
-            background: none;
-            border: none;
-            border-bottom: 2px solid #ebc896;
-        }
-        & input:focus {
-            outline: none;
-            border-bottom-color: #5e3803;
-        }
-        & #idade{
-            width: 30px;
-        }
-
-        & textarea{
-            height: 30px;
-            background: none;
-            border: none;
-            border-bottom: 2px solid #ebc896;
-        }
-
-        & textarea:focus {
-            outline: none;
-            border-bottom-color: #5e3803;
-        }
+@keyframes bloco {
+    0% {
+        opacity: 0; /* Texto totalmente transparente */
         
-
     }
-}
-
-.recomendacoes{
-    max-width: 800px;
-    border: 2px solid #ebc896;
-
-    & .block{
-    height: 30px;
-    width: 200px;
-    background-color: #ebc896;
-    margin-top: -15px;
-    margin-left: auto;
-    margin-right: auto;
-    }
-
-    & li {
-        list-style: "- ";
-        
+    100% {
+        opacity: 1; /* Texto totalmente visível */
         
     }
 }
-

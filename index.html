@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/5.1.2/inputmask.min.js"></script>
+
 </head>
 <body>
     <header>
@@ -32,95 +34,402 @@
 
     <main>
         <section class="inform">
-            <div>
-                <p>
-
+            <div class="container-fluid mt-3">
+                <p class="alert alert-primary">
+                    Seja bem vindo,
+                    para que possamos dar inicio ao agendamento do seu horário
+                    preciso que responda a ficha de anamnese abaixo!
                 </p>
             </div>
         </section>
-        <section class="section-cadastro container mb-4 mt-5">
-              <div class="d-flex justify-content-center mb-3">
+        <section class="cadastro container-fluid mb-5 mt-5">
+            <div class="d-flex justify-content-center mb-3">
                 <div class="p-3 ">
-                  <p class="ficha text-center"><b>FICHA DE ANAMNESE - EXTENSÃO DE CÍLIOS</b></p>
-                  <form>
-                    <div class="row">
-                        <div class="col-auto">
-                            <div class="input-form mb-3">
-                                <label for="text">Nome completo:</label>
-                                <input type="text" name="nome" id="nome">
+                    <p class="ficha text-center"><b>FICHA DE ANAMNESE - EXTENSÃO DE CÍLIOS</b></p>
+                    <form>
+                        <div>
+                            <div class="text-center alert alert-warning me-auto ms-auto p-2">
+                                <P>ATENÇÃO!! <br>Responda a anamnese com seriedade, caso tenha dúvida pergunte.</P>
                             </div>
-                            <div class="input-form mb-3">
-                                <label for="idade">Idade</label>
-                                <input type="number" name="idade" id="idade">
-                                <label for="idade">Telefone:</label>
-                                <input type="number" name="telefone" id="telefone" placeholder="(XX) XXXXX-XXXX">
+                            <div>
+                                <div class="input-form d-flex mb-3">
+                                    <label for="text">Nome completo:</label>
+                                    <input class="" type="text" name="nome" id="nome">
+                                </div>
+                                <div class="input-form mb-3">
+                                    <label for="idade">Idade</label>
+                                    <input type="number" name="idade" id="idade">
+                                    <label for="idade">Telefone:</label>
+                                    <input type="l" name="telefone" id="telefone" required>
+                                </div>
+                                
+                                <div class="input-form mb-3">
+                                    <label for="endereco">Endereço:</label>
+                                    <textarea class="w-100" type="textarea" name="endereco" id="endereco"></textarea>
+                                </div>
+                                <div class="input-form mb-3">
+                                    <label for="proficao">Profissão</label>
+                                    <input type="textarea" name="proficao" id="proficao">
+                                </div>
+                                <div class="input-form mb-3">
+                                    <label for="instagram">Instagram: @</label>
+                                    <input type="text" name="instagram" id="instagram">
+                                </div>      
+                                <div class="input-form mb-5">
+                                    <label for="meet">Como me conheceu:</label>
+                                    <input type="text" name="meet" id="meet">
+                                </div>
+                            </div>                                             
+                        </div>
+                        <div class="avaliacao mb-5">
+                            <div class="block text-center me-auto ms-auto">
+                                <P>AVALIAÇÃO</P>
+                            </div>
+                            <div class="d-flex ">
+                                <label class="p-1 flex-grow-1" for="q-1">Usa lentes de contato?</label><br>
+                                <label class="p-1">
+                                    <input type="radio" name="opcao-q1" value="Sim" class="radio-input"  required>
+                                    <span>Sim</span>
+                                </label>
+                                <label class="p-1">
+                                    <input type="radio" name="opcao-q1" value="Não" class="radio-input"  required>
+                                    <span>Não</span>
+                                </label>
+                            </div>
+                            <div class="d-flex">
+                                <label class="p-1 flex-grow-1" for="q-2">Já usou extensão de cílios?</label><br>
+                                <label class="p-1">
+                                    <input type="radio" name="opcao-q2" value="Sim" class="radio-input"  required>
+                                    <span>Sim</span>
+                                </label>
+                                <label class="p-1">
+                                    <input type="radio" name="opcao-q2" value="Não" class="radio-input"  required>
+                                    <span>Não</span>
+                                </label>
+                            </div>
+                            <div class="d-flex">
+                                <label class="p-1 flex-grow-1" for="q-3">Está de rímei? Lash Lifting?</label><br>
+                                <label class="p-1">
+                                    <input type="radio" name="opcao-q3" value="Sim" class="radio-input"  required>
+                                    <span>Sim</span>
+                                </label>
+                                <label class="p-1">
+                                    <input type="radio" name="opcao-q3" value="Não" class="radio-input"  required>
+                                    <span>Não</span>
+                                </label>
+                            </div>
+                            <div class="d-flex">
+                                <label class="p-1 flex-grow-1" for="q-4">Tem alguma alergia a cosméticos?</label><br>
+                                <label class="p-1">
+                                    <input type="radio" name="opcao-q4" value="Sim" class="radio-input"  required>
+                                    <span>Sim</span>
+                                </label>
+                                <label class="p-1">
+                                    <input type="radio" name="opcao-q4" value="Não" class="radio-input"  required>
+                                    <span>Não</span>
+                                </label>
+                            </div>
+                            <div class="d-flex">
+                                <label class="p-1 flex-grow-1" for="q-5">Tem alguma alergia de esmalte?</label><br>
+                                <label class="p-1">
+                                    <input type="radio" name="opcao-q5" value="Sim" class="radio-input"  required>
+                                    <span>Sim</span>
+                                </label>
+                                <label class="p-1">
+                                    <input type="radio" name="opcao-q5" value="Não" class="radio-input"  required>
+                                    <span>Não</span>
+                                </label>
+                            </div>
+                            <div class="d-flex">
+                                <label class="p-1 flex-grow-1" for="q-6">Utiliza suplementos vitamínicos?</label><br>
+                                <label class="p-1">
+                                    <input type="radio" name="opcao-q6" value="Sim" class="radio-input"  required>
+                                    <span>Sim</span>
+                                </label>
+                                <label class="p-1">
+                                    <input type="radio" name="opcao-q6" value="Não" class="radio-input"  required>
+                                    <span>Não</span>
+                                </label>
+                            </div>
+                            <div class="d-flex">
+                                <label class="p-1 flex-grow-1" for="q-7">Problemas com Tireóide?</label><br>
+                                <label class="p-1">
+                                    <input type="radio" name="opcao-q7" value="Sim" class="radio-input"  required>
+                                    <span>Sim</span>
+                                </label>
+                                <label class="p-1">
+                                    <input type="radio" name="opcao-q7" value="Não" class="radio-input"  required>
+                                    <span>Não</span>
+                                </label>
+                            </div>
+                            <div class="d-flex">
+                                <label class="p-1 flex-grow-1" for="q8">É gestante ou lactante?</label><br>
+                                <label class="p-1">
+                                    <input type="radio" id="radio-sim" name="opcao-q8" value="Sim" class="radio-input"  required>
+                                    <span>Sim</span>
+                                </label>
+                                <label class="p-1">
+                                    <input type="radio" id="radio-nao" name="opcao-q8" value="Não" class="radio-input"  required>
+                                    <span>Não</span>
+                                </label>
+                            </div>
+                            <div id="r8" class="input-form" style="display: none;">
+                                <label for="quanto-tempo">A quanto tempo?</label>
+                                <input type="text" id="quanto-tempo" name="quanto-tempo">
+                            </div>
+                        </div>
+                        <div class="questionario mb-5">
+                            <div class="block text-center me-auto ms-auto">
+                                <P>QUESTIONÁRIO</P>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <label class="p-1" for="q-9">Como é seu crescimento capilar?</label>
+                                </div>
+                                <div class="col-5">
+                                    <label class="p-1">
+                                        <input type="radio" name="opcao-q9" value="Lento" class="radio-input"  required>
+                                        <span>Lento</span>
+                                    </label>
+                                    <label class="p-1">
+                                        <input type="radio" name="opcao-q9" value="Rápido" class="radio-input"  required>
+                                        <span>Rápido</span>
+                                    </label>
+                                    <label class="p-1">
+                                        <input type="radio" name="opcao-q9" value="Com queda" class="radio-input"  required>
+                                        <span>Com queda</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <hr class="m-0">
+                            <div class="row">
+                                <div class="col">
+                                    <label class="p-1" for="q-10">Você possue blefarite? (Inflamação nas pálpebras)</label>
+                                </div>
+                                <div class="col-auto">
+                                    <label class="p-1">
+                                        <input type="radio" name="opcao-q10" value="Sim" class="radio-input"  required>
+                                        <span>Sim</span>
+                                    </label>
+                                    <label class="p-1">
+                                        <input type="radio" name="opcao-q10" value="Não" class="radio-input"  required>
+                                        <span>Não</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <hr class="m-0">
+                            <div class="row">
+                                <div class="col">
+                                    <label class="p-1" for="q-11">Fez uso de algum medicamento nos olhos?</label>
+                                </div>
+                                <div class="col-auto">
+                                    <label class="p-1">
+                                        <input type="radio" name="opcao-q11" value="Sim" class="radio-input"  required>
+                                        <span>Sim</span>
+                                    </label>
+                                    <label class="p-1">
+                                        <input type="radio" name="opcao-q11" value="Não" class="radio-input"  required>
+                                        <span>Não</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <hr class="m-0">
+                            <div class="row">
+                                <div class="col">
+                                    <label class="p-1" for="q-12">Está em tratamento oncológico?</label>
+                                </div>
+                                <div class="col-auto">
+                                    <label class="p-1">
+                                        <input type="radio" name="opcao-q12" value="Sim" class="radio-input"  required>
+                                        <span>Sim</span>
+                                    </label>
+                                    <label class="p-1">
+                                        <input type="radio" name="opcao-q12" value="Não" class="radio-input"  required>
+                                        <span>Não</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <hr class="m-0">
+                            <div class="row">
+                                <div class="col">
+                                    <label class="p-1" for="q-13">Fez alguma cirurgia na região dos olhos nos últimos 6 meses?</label>
+                                </div>
+                                <div class="col-auto">
+                                    <label class="p-1">
+                                        <input type="radio" name="opcao-q13" value="Sim" class="radio-input"  required>
+                                        <span>Sim</span>
+                                    </label>
+                                    <label class="p-1">
+                                        <input type="radio" name="opcao-q13" value="Não" class="radio-input"  required>
+                                        <span>Não</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <hr class="m-0">
+                            <div class="row">
+                                <div class="col">
+                                    <label class="p-1" for="q-14">É fumante?</label>
+                                </div>
+                                <div class="col-auto">
+                                    <label class="p-1">
+                                        <input type="radio" name="opcao-q14" value="Sim" class="radio-input"  required>
+                                        <span>Sim</span>
+                                    </label>
+                                    <label class="p-1">
+                                        <input type="radio" name="opcao-q14" value="Não" class="radio-input"  required>
+                                        <span>Não</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <hr class="m-0">
+                            <div class="row">
+                                <div class="col">
+                                    <label class="p-1" for="q-15">Sua rotina do dia a dia é estressada?</label>
+                                </div>
+                                <div class="col-auto">
+                                    <label class="p-1">
+                                        <input type="radio" name="opcao-q15" value="Sim" class="radio-input"  required>
+                                        <span>Sim</span>
+                                    </label>
+                                    <label class="p-1">
+                                        <input type="radio" name="opcao-q15" value="Não" class="radio-input"  required>
+                                        <span>Não</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <hr class="m-0">
+                            <div class="row">
+                                <div class="col">
+                                    <label class="p-1" for="q-16">Vai a piscinas?</label>
+                                </div>
+                                <div class="col-auto">
+                                    <label class="p-1">
+                                        <input type="radio" name="opcao-q15" value="Sim" class="radio-input"  required>
+                                        <span>Sim</span>
+                                    </label>
+                                    <label class="p-1">
+                                        <input type="radio" name="opcao-q15" value="Não" class="radio-input"  required>
+                                        <span>Não</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <hr class="m-0">
+                            <div class="row">
+                                <div class="col">
+                                    <label class="p-1" for="q-17">Faz cuidados com a pele?</label>
+                                </div>
+                                <div class="col-auto">
+                                    <label class="p-1">
+                                        <input type="radio" name="opcao-q17" value="Sim" class="radio-input"  required>
+                                        <span>Sim</span>
+                                    </label>
+                                    <label class="p-1">
+                                        <input type="radio" name="opcao-q17" value="Não" class="radio-input"  required>
+                                        <span>Não</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <hr class="m-0">
+                            <div class="row">
+                                <div class="col">
+                                    <label class="p-1" for="q-18">Tem ansiedade?</label>
+                                </div>
+                                <div class="col-auto">
+                                    <label class="p-1">
+                                        <input type="radio" name="opcao-q18" value="Sim" class="radio-input"  required>
+                                        <span>Sim</span>
+                                    </label>
+                                    <label class="p-1">
+                                        <input type="radio" name="opcao-q18" value="Não" class="radio-input"  required>
+                                        <span>Não</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <hr class="m-0">
+                            <div class="row">
+                                <div class="col">
+                                    <label class="p-1" for="q-19">Sabe os cuidados com os cílios?</label>
+                                </div>
+                                <div class="col-auto">
+                                    <label class="p-1">
+                                        <input type="radio" name="opcao-q19" value="Sim" class="radio-input"  required>
+                                        <span>Sim</span>
+                                    </label>
+                                    <label class="p-1">
+                                        <input type="radio" name="opcao-q19" value="Não" class="radio-input"  required>
+                                        <span>Não</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <hr class="m-0">
+                            <div class="row">
+                                <div class="col">
+                                    <label class="p-1" for="q-20">Possui alguma doença ocular? (Glaucoma, catarata, conjuntivite, síndrome dos olhos secos, olhos sensíveis)</label>
+                                </div>
+                                <div class="col-auto">
+                                    <label class="p-1">
+                                        <input type="radio" name="opcao-q20" value="Sim" class="radio-input"  required>
+                                        <span>Sim</span>
+                                    </label>
+                                    <label class="p-1">
+                                        <input type="radio" name="opcao-q20" value="Não" class="radio-input"  required>
+                                        <span>Não</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <hr class="m-0">
+                            <div class="row">
+                                <div class="col">
+                                    <label class="p-1" for="q-21">Dorme de lado?</label>
+                                </div>
+                                <div class="col">
+                                    <label class="p-1">
+                                        <input type="radio" name="opcao-q21" value="Direito" class="radio-input"  required>
+                                        <span>Direito</span>
+                                    </label>
+                                    <label class="p-1">
+                                        <input type="radio" name="opcao-q21" value="Esquerdo" class="radio-input"  required>
+                                        <span>Esquerdo</span>
+                                    </label>
+                                    <label class="p-1">
+                                        <input type="radio" name="opcao-q21" value="Bruços" class="radio-input"  required>
+                                        <span>Bruços</span>
+                                    </label>
+                                    <label class="p-1">
+                                        <input type="radio" name="opcao-q21" value="Frente" class="radio-input"  required>
+                                        <span>Frente</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="recomendacoes mb-4">
+                            <div class="block alert alert-danger text-center me-auto ms-auto"> RECOMENDAÇÕES IMPORTANTES!!</div>
+                            <div>
+                                <ul class="enfase">
+                                    <li><em>Não usar máscara de cílios por um período de 48h anterior ao procedimento</em></li>
+                                    <li><em>Não poderá ter realizado Permanente de Cílios (Lash Lifting) nos últimos 20 dias</em></li>
+                                </ul>
                             </div>
                             
-                            <div class="input-form mb-3">
-                                <label for="endereco">Endereço:</label>
-                                <textarea type="textarea" name="endereco" id="endereco"></textarea>
-                            </div>
-                            <div class="input-form mb-3">
-                                <label for="proficao">Profissão</label>
-                                <input type="textarea" name="proficao" id="proficao">
-                            </div>
-
-                            <div class="input-form mb-3">
-                                <label for="instagram">Instagram: @</label>
-                                <input type="text" name="instagram" id="instagram">
-                            </div>
-                            <div class="text-center alert alert-warning p-1">
-                                <p>ATENÇÃO!!</p>
-                                <P>Responda a anamnese com seriedade, caso tenha dúvida pergunte.</P>
+                            <div class="d-flex justify-content-center">
+                                <ul>
+                                    <li>Poderá ocorrer irritação como ardência, vermelhidão e coceira nos olhos se a(o) cliente abrir os olhos antes da ordem da profissional ou ficar conversando no decorrer do procedimento.</li>
+                                    <li>Não utilizar loção demaquilante bifásico, cremes oleosos e/ou ácidos (peeling) na região dos olhos.</li>
+                                    <li>Para remover maquiagem pesada pode-se utilizar ÁGUA MICELAR ou lenõs umidecidos para o recém nascidos, sempre poupando os cílios.</li>
+                                    <li>Colocar uma medida do shampoo na mão antes de aplicar nas extenções, lavar as extensões no sentido do crescimento dos fios com auxílio dos dedos ou pincel macio. enxaguar com água fria abundade, secar apenas pressionando com papel absorvente ou toalha macia e escovar com a escovinha de cílios</li>
+                                    <li>Se houver sensibilidade, irritação, inflamação nos olhos e ao redor, é nevessário retirar os cílios e deve comunicar imediatamente o profissional responsável pelo procedimento.</li>
+                                </ul>
                             </div>
                         </div>
-                        <div class="col-auto">
-                            <label for="q-1">Como é seu crescimento capilar?</label><br>
-                            <label class="mt-1 mb-1">
-                                <input type="radio" name="opcao-q1" value="Lenta" class="radio-input"  required>
-                                <span>Lenta</span>
-                            </label>
-                            <label class="mt-1 mb-1">
-                                <input type="radio" name="opcao-q1" value="Rápida" class="radio-input"  required>
-                                <span>Rápida</span>
-                            </label>
-                            <label class="mt-1 mb-1">
-                                <input type="radio" name="opcao-q1" value="Com queda" class="radio-input"  required>
-                                <span>Com queda</span>
-                            </label>
+                        <div class="row mt-4">
+                            <button class="btn btn-dark mb-0" >Cadastrar</button>
                         </div>
-                    </div>
                     
-                    <div class="row mt-4">
-                        <button class="btn btn-primary mb-0" >Submit</button>
-                    </div>
-                     
-                  </form>
-
-
+                    </form>
                 </div>
+            </div>
+        </section>
 
-            </div>
-        </section>
-        
-        <section class="container recomendacoes mb-4">
-            <div class="block mb-4 text-center"></div>
-            <div class="">
-                <div class="text-center alert alert-danger">RECOMENDAÇÕES IMPORTANTES!!</div>
-                <p class="m-0"><i class="bi bi-arrow-right-short"></i><em>Não usar máscara de cílios por um período de 48h anterior ao procedimento</em></p>
-                <p><i class="bi bi-arrow-right-short"></i><em>Não poderá ter realizado Permanente de Cílios (Lash Lifting) nos últimos 20 dias</em></p>
-            </div>
-            
-            <div class="d-flex justify-content-center">
-                <ul>
-                    <li>Poderá ocorrer irritação como ardência, vermelhidão e coceira nos olhos se a(o) cliente abrir os olhos antes da ordem da profissional ou ficar conversando no decorrer do procedimento.</li>
-                    <li>Não utilizar loção demaquilante bifásico, cremes oleosos e/ou ácidos (peeling) na região dos olhos.</li>
-                    <li>Para remover maquiagem pesada pode-se utilizar ÁGUA MICELAR ou lenõs umidecidos para o recém nascidos, sempre poupando os cílios.</li>
-                    <li>Colocar uma medida do shampoo na mão antes de aplicar nas extenções, lavar as extensões no sentido do crescimento dos fios com auxílio dos dedos ou pincel macio. enxaguar com água fria abundade, secar apenas pressionando com papel absorvente ou toalha macia e escovar com a escovinha de cílios</li>
-                    <li>Se houver sensibilidade, irritação, inflamação nos olhos e ao redor, é nevessário retirar os cílios e deve comunicar imediatamente o profissional responsável pelo procedimento.</li>
-                </ul>
-            </div>
-        </section>
     </main>
 
 
