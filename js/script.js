@@ -61,7 +61,7 @@ inputPhone.addEventListener('input', function() {
         } else {
             format += valor.substring(2);
         }
-
+        
         this.value = format;
     } 
 });

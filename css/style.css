@@ -1,10 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
 .navbar-expand-sm{
-    background-color: #917b5d;
+    background-color: #3d3d3d;
+    max-height: auto;
     & .navbar-brand, ul{
         color: #fff;
     }
     & .nav-item{
         color: #fff;
+    }
+    .navbar-brand:hover{
+        color: #ececec;
+    }
+    img {
+        background-size: cover;
+        max-height: 100px;
+    }
+
+    .black{
+        background-color: #3f3f3f;
+
+    }
+    .withe{
+        background-color: #474a4d;
     }
 }
 
@@ -18,11 +39,11 @@
     max-width: 800px;
     border: 2px solid #ebc896;
 
-    & b{
+    b{
         animation: bloco 1s;
     }
 
-    & .ficha{
+    .ficha{
         padding: 5px;
         background-color: #917b5d;
         color: #fff;
@@ -30,66 +51,85 @@
         
     }
 
-    & form{
+    form{
         max-width: 800px;
-        & .input-form {
+        .input-form {
             margin-left: auto;
             margin-right: auto;
             max-width: 400px;
     
-            & input {
-                width: auto;
+            input {
                 background: none;
                 border: none;
                 border-bottom: 2px solid #ebc896;
             }
     
-            & input::-webkit-outer-spin-button,
+            input::-webkit-outer-spin-button,
             input::-webkit-inner-spin-button {
             -webkit-appearance: none;
             margin: 0;
             }
     
             /* Firefox */
-            & input[type=number] {
+            input[type=number] {
             -moz-appearance: textfield;
             }
     
-            & input[type="number"]{
+            input[type="number"]{
                 
                 width: auto;
                 background: none;
                 border: none;
                 border-bottom: 2px solid #ebc896;
             }
-            & input:focus {
+            input:focus {
                 outline: none;
                 border-bottom-color: #5e3803;
             }
-            & #idade{
+            #idade{
                 width: 30px;
             }
     
-            & textarea{
+            textarea{
                 height: 30px;
                 background: none;
                 border: none;
                 border-bottom: 2px solid #ebc896;
             }
     
-            & textarea:focus {
+            textarea:focus {
                 outline: none;
                 border-bottom-color: #5e3803;
-            }            
+            }
         }
-        & .avaliacao{
+        .avaliacao, .questionario{
             border: 2px solid #ebc896;
             
-            & .block{
+            .block{
                 background-color: #ebc896;
                 width: 200px;
                 margin-top: -12px;
-                }
+            }
+            .radio-group input[type="radio"] {
+                clip: rect(0 0 0 0);
+                clip-path: inset(100%);
+                position: absolute;
+            }            
+            .radio-group input[type="radio"]:checked + span {
+                box-shadow: 0 0 0 0.0625em #fcd7a4;
+                background-color: #857155;
+                color: #ffffff;
+            }            
+            label span {
+                display: block;
+                cursor: pointer;
+                background-color: #fff;
+                padding: 0.375em .75em;
+                box-shadow: 0 0 0 0.0625em #b5bfd9;
+                letter-spacing: .05em;
+                color: #000000;
+                transition: background-color .5s ease;
+            }            
         }
     }
     & .recomendacoes{
@@ -113,16 +153,11 @@
             list-style: "- ";     
         }
     }
-    & .questionario{
-        max-width: 700px;
-        border: 2px solid #ebc896;
+}
 
-        & .block{
-            background-color: #ebc896;
-            width: 200px;
-            margin-top: -12px;
-        }
-    }
+.galeria{
+    height: 80px;
+    
 }
 
 @keyframes bloco {
@@ -135,3 +170,13 @@
         
     }
 }
+
+@keyframes fotos {
+    0% {
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.2);
+    }
+}
+
