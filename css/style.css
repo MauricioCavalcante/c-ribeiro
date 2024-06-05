@@ -112,6 +112,7 @@
             .radio-group input[type="radio"]:checked + span {
                 box-shadow: 0 0 0 0.0625em #fcd7a4;
                 background-color: #857155;
+                border-radius: 5px;
                 color: #ffffff;
             }            
             label span {
@@ -119,6 +120,7 @@
                 cursor: pointer;
                 background-color: #fff;
                 padding: 0.375em .75em;
+                border-radius: 5px;
                 box-shadow: 0 0 0 0.0625em #b5bfd9;
                 letter-spacing: .05em;
                 color: #000000;

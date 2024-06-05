@@ -1,0 +1,14 @@
+TODO:
+    Adicionar checkbox do aceite do "termo"
+
+
+    Gerar alertas
+        Após procedimento, retorno em 20 dias (alerta)
+
+    
+    Página
+        Historico de atendimentos, Agendamentos
+    
+    Ao enviar formulário:
+	Preencher Doc (automático)
+		- Nome do documento = nome da cliente
