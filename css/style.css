@@ -7,6 +7,10 @@
     border: 2px solid red;
 }
 
+:root {
+    
+}
+
 .navbar-expand-sm{
     background-color: #3d3d3d;
     max-height: auto;
