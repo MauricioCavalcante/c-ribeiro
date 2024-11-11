@@ -1,5 +1,5 @@
 .borda {
-    border: 2px solid rebeccapurple;
+    border: 2px solid transparent;
 }
 
 
@@ -49,7 +49,6 @@
     background: rgb(145, 118, 84);
     background: linear-gradient(0deg, rgba(145, 118, 84, 1) 0%, rgba(255, 249, 242, 1) 35%, rgba(255, 249, 242, 1) 71%, rgba(145, 118, 84, 1) 100%);
     border: 2px solid #c2ad91;
-
 }
 
 #firstSection .img-nome {
@@ -67,15 +66,23 @@
     border: 2px solid;
     padding: 10px 80px;
     color: #4d3f30;
+    z-index: -1;
 }
 
 #firstSection .img-bottom {
     position: absolute;
     bottom: 0px;
     right: 0;
+    z-index: -1;
 }
 
 
+
+
+
+
+
+/* Segunda section  ----------------------------------------------------------- */
 
 #secondSection {
     background: transparent;
@@ -85,6 +92,16 @@
     text-align: center;
     color: #4d3f30;
     border-bottom: 1px solid #4d3f30;
+    position: relative;
+}
+
+#secondSection .img-topo {
+    position: absolute;
+    z-index: -1;
+    width: 300px;
+    top: 0;
+    right: 0;
+    filter: blur(5px);
 }
 
 #secondSection h3 {
@@ -95,7 +112,7 @@
 
 #secondSection .item {
     min-width: 200px;
-    max-width: 800px;
+    max-width: 600px;
     height: 200px;
     margin: 0 auto 40px auto;
     display: flex;
@@ -111,6 +128,38 @@
     justify-content: center;
 }
 
+#secondSection .item .descricao p {
+    font-size: 1.2em;
+    line-height: 1.1;
+}
+
+#secondSection .item .descricao .valor {
+    display: flex; /* Organiza os elementos em coluna */
+    justify-content: space-between; /* Espalha o conteúdo na altura disponível */
+    align-items: center; /* Centraliza o conteúdo horizontalmente */
+    position: relative;
+    width: 230px;
+    height: 60px;
+    border-radius: 10px;
+    background: #917654;
+    background: -webkit-linear-gradient(to bottom, #ffffff, #917654); 
+    background: linear-gradient(to bottom, #ffffff, #917654);
+    bottom: -30px;
+    left: 50px;
+}
+
+#secondSection .item .descricao .valor .preco {
+    font-family: 'Glamore', sans-serif;
+    font-size: 1.4em;
+    margin-bottom: 5px; /* Espaço entre o preço e a manutenção */
+}
+
+#secondSection .item .descricao .valor .manutencao {
+    font-size: 0.9em; /* Ajusta o tamanho da fonte da manutenção */
+    font-weight: bold;
+}
+
+
 #secondSection .item .image {
     width: 280px;
     height: 150px;
@@ -118,21 +167,15 @@
     border: 2px solid #917654;
     position: relative;
     left: 50px;
-    /* Se necessário, ajuste a posição */
     background-size: cover;
-    /* Garante que a imagem de fundo preencha o contêiner */
     background-repeat: no-repeat;
-    /* Evita que a imagem se repita */
     background-position: center;
-    /* Centraliza a imagem de fundo */
 }
 
-/* Para o primeiro item, especificando o caminho da imagem */
 #secondSection .item .image:nth-child(1) {
     background-image: url('../img/cilios/WhatsApp%20Image%202024-05-16%20at%2019.28.14.jpeg');
 }
 
-/* Para o segundo item, especificando o caminho da imagem */
 #secondSection .item .image:nth-child(2) {
     background-image: url('../img/cilios/WhatsApp%20Image%202024-05-16%20at%2019.28.15.jpeg');
 }
